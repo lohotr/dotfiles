@@ -20,10 +20,13 @@ return require('packer').startup(function(use)
     }
     use 'nvim-telescope/telescope-file-browser.nvim'
 
+    -- Theme
     use {
         'gruvbox-community/gruvbox',
         run = ':colorscheme gruvbox'
     }
+
+    use 'onsails/lspkind.nvim' -- vscode-like pictograms
 
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'

@@ -1,7 +1,10 @@
--- set completeopt=menuone,noinsert,noselect
+local status, cmp = pcall(require, 'cmp')
+if not status then
+    print('cmp not found')
+    return
+end
 
-  -- Setup nvim-cmp.
-local cmp = require'cmp'
+local lspkind = require('lspkind')
 
 cmp.setup({
   snippet = {
@@ -27,7 +30,10 @@ cmp.setup({
     { name = 'luasnip' }, -- For luasnip users.
   }, {
     { name = 'buffer' },
-  })
+  }),
+  formatting = {
+    format = lspkind.cmp_format({with_text = true, maxwidth = 50})
+  }
 })
 
   -- Set configuration for specific filetype.
@@ -39,8 +45,7 @@ cmp.setup({
 --    })
 --  })
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-
-require'lspconfig'.gopls.setup{
-  capabilities = capabilities
-}
+vim.cmd [[
+    set completeopt=menuone,noinsert,noselect
+    highlight! default link CmpItemKind CmpItemMenuDefault
+]]
