@@ -10,9 +10,10 @@ telescope.load_extension 'file_browser'
 telescope.setup {
     extensions = {
         file_browser = {
+            hijack_netrw = true,
             mappings = {
                 ['n'] = {
-                    ['<leader>fn'] = fb_actions.create,
+                    ['<leader>nc'] = fb_actions.create,
                     ['<leader>fr'] = fb_actions.rename,
                     ['<leader>fc'] = fb_actions.copy,
                     ['<leader>fd'] = fb_actions.remove,

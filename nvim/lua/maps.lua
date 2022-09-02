@@ -34,6 +34,12 @@ keymap.set("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn
 keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>", opts)
 keymap.set("n", "<leader>dt", ":lua require'dap-go'.debug_test()<CR>", opts)
 
+-- Bufferline
+keymap.set("n", "gt", [[v:count ? (v:count > 0 ? "m'" . ":lua require('bufferline').go_to_buffer(" . v:count . ", true)<CR>" : ":BufferLineCycleNext<CR>") : ":BufferLineCycleNext<CR>"]], { noremap = true, silent = true, expr = true })
+keymap.set("n", "gT", ":BufferLineCyclePrev<CR>", opts)
+keymap.set("n", "gpg", ":BufferLinePick<CR>", opts)
+keymap.set("n", "gpc", ":BufferLinePickClose<CR>", opts)
+
 -- Resize window
 keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')

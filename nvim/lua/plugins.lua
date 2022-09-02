@@ -26,6 +26,12 @@ return require('packer').startup(function(use)
         run = ':colorscheme gruvbox'
     }
 
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "v2.*",
+        requires = 'kyazdani42/nvim-web-devicons'
+    }
+
     use 'onsails/lspkind.nvim' -- vscode-like pictograms
 
     use 'hrsh7th/cmp-nvim-lsp'
