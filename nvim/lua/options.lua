@@ -22,7 +22,7 @@ vim.o.exrc = true
 vim.o.hidden = true
 vim.o.swapfile = false
 vim.o.backup = false
---vim.o.undodir = ~/.vim/undodir
+vim.o.undodir = '~/.vim/undodir'
 vim.o.undofile = true
 vim.o.showmode = false
---set termguicolors
+--vim.o.termguicolors = true

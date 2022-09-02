@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true}
 
+keymap.set("n", "<leader>fb", ":lua require('telescope').extensions.file_browser.file_browser({initial_mode = 'normal'})<CR>", opts)
 keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files()<CR>", opts)
 keymap.set("n", "<leader>gs", ":lua require('telescope.builtin').grep_string()<CR>", opts)
 keymap.set("n", "<leader>lg", ":lua require('telescope.builtin').live_grep()<CR>", opts)
