@@ -26,3 +26,5 @@ vim.o.undodir = '~/.vim/undodir'
 vim.o.undofile = true
 vim.o.showmode = false
 --vim.o.termguicolors = true
+
+vim.cmd 'colorscheme gruvbox'

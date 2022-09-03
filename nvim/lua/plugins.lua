@@ -1,5 +1,3 @@
-vim.cmd 'colorscheme gruvbox'
-
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig'
@@ -44,10 +42,11 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
     
-    --Start setup the debugging
+    -- Debugging
     use 'mfussenegger/nvim-dap'
     use 'rcarriga/nvim-dap-ui'
     use 'leoluz/nvim-dap-go'
+    use 'theHamsta/nvim-dap-virtual-text'
     --use 'theHamsta/nvim-dap-virtual-text'
     --use 'nvim-telescope/telescope-dap.nvim'
     --End setup the debugging
