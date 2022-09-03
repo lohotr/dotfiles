@@ -25,6 +25,7 @@ vim.o.backup = false
 vim.o.undodir = '~/.vim/undodir'
 vim.o.undofile = true
 vim.o.showmode = false
---vim.o.termguicolors = true
+vim.o.termguicolors = true -- not work with MacOS terminal, should use iterm2 instead
 
 vim.cmd 'colorscheme gruvbox'
+
