@@ -14,7 +14,7 @@ vim.o.wrap = false
 vim.o.incsearch = true
 vim.o.scrolloff = 8
 vim.o.signcolumn = 'yes'
-vim.o.colorcolumn = 120
+vim.o.colorcolumn = '120'
 vim.o.splitbelow = true
 
 --need to test
@@ -22,10 +22,10 @@ vim.o.exrc = true
 vim.o.hidden = true
 vim.o.swapfile = false
 vim.o.backup = false
-vim.o.undodir = '~/.vim/undodir'
 vim.o.undofile = true
 vim.o.showmode = false
 vim.o.termguicolors = true -- not work with MacOS terminal, should use iterm2 instead
 
+vim.cmd 'set undodir=~/.vim/undodir'
 vim.cmd 'colorscheme gruvbox'
 
