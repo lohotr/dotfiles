@@ -17,7 +17,7 @@ telescope.setup {
                     ['<leader>fr'] = fb_actions.rename,
                     ['<leader>fc'] = fb_actions.copy,
                     ['<leader>fd'] = fb_actions.remove,
-                    ['<leader>.']  = fb_actions.toggle_hidden,
+                    ['<leader>h']  = fb_actions.toggle_hidden,
                 },
             }
         }
