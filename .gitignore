@@ -54,7 +54,6 @@ go/
 .h2.server.properties
 .hyper.js
 .hyper.js~
-.ideavimrc
 .lesshst
 .p10k.zsh
 .pdfbox.cache
