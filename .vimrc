@@ -15,6 +15,7 @@ set scrolloff=8
 set signcolumn=yes
 set colorcolumn=120
 set splitbelow
+set hlsearch
 
 "need to test
 set exrc
