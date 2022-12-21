@@ -4,8 +4,8 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true}
 
 -- Telescope
-keymap.set("n", "<leader>fb", ":lua require('telescope').extensions.file_browser.file_browser({initial_mode = 'normal'})<CR>", opts)
-keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files()<CR>", opts)
+keymap.set("n", "<leader>fb", ":lua require('telescope').extensions.file_browser.file_browser({respect_gitignore = false, initial_mode = 'normal'})<CR>", opts)
+keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({no_ignore = true})<CR>", opts)
 keymap.set("n", "<leader>gs", ":lua require('telescope.builtin').grep_string()<CR>", opts)
 keymap.set("n", "<leader>lg", ":lua require('telescope.builtin').live_grep()<CR>", opts)
 keymap.set("n", "<C-p>", ":lua require('telescope.builtin').git_files()<CR>", opts)
