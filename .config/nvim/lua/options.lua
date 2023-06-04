@@ -26,4 +26,13 @@ vim.o.undofile = true
 vim.o.showmode = false
 vim.o.termguicolors = true -- not work with MacOS terminal, should use iterm2 instead
 
+-- support `indent-blankline`
+vim.opt.list = true
+vim.opt.listchars:append "eol:↴"
+
+
+--vim.o.shortmess = 'a'
+--vim.cmd 'set cmdheight=10'
+--vim.cmd 'set shortmess=a'
+
 vim.cmd 'set undodir=~/.vim/undodir'

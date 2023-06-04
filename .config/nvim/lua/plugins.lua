@@ -1,4 +1,3 @@
-
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -96,8 +95,10 @@ require('lazy').setup({
         -- Enable `lukas-reineke/indent-blankline.nvim`
         -- See `:help indent_blankline.txt`
         opts = {
-          char = '┊',
-          show_trailing_blankline_indent = false,
+            char = '┊',
+            show_current_context = true,
+            show_trailing_blankline_indent = false,
+            show_end_of_line = true,
         },
     },
 }, {})
