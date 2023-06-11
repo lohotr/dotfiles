@@ -3,7 +3,7 @@
 --    `:help lazy.nvim.txt` for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system {
+  vim.fn.system { -- clone lazy.nvim from git registry
     'git',
     'clone',
     '--filter=blob:none',
@@ -27,9 +27,10 @@ require('lazy').setup({
         },
         build = ':TSUpdate',
     },
+
     -- Fuzzy Finder (files, lsp, etc)
     { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
-    
+
     -- Fuzzy Finder Algorithm which requires local dependencies to be built.
     -- Only load if `make` is available. Make sure you have the system
     -- requirements installed.
@@ -42,6 +43,7 @@ require('lazy').setup({
           return vim.fn.executable 'make' == 1
         end,
     },
+
     {
         'navarasu/onedark.nvim',
         priority = 1000,
@@ -52,10 +54,12 @@ require('lazy').setup({
             vim.cmd.colorscheme 'onedark'
         end,
     },
+
     -- Support Java LSP
     {
         'mfussenegger/nvim-jdtls',
     },
+
     -- NOTE: This is where your plugins related to LSP can be installed.
     --  The configuration is done below. Search for lspconfig to find it below.
     {
@@ -65,15 +69,16 @@ require('lazy').setup({
         -- Automatically install LSPs to stdpath for neovim
         { 'williamboman/mason.nvim', config = true },
         'williamboman/mason-lspconfig.nvim',
-  
+
         -- Useful status updates for LSP
         -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
         { 'j-hui/fidget.nvim', opts = {} },
-  
+
         -- Additional lua configuration, makes nvim stuff amazing!
         'folke/neodev.nvim',
       },
     },
+
     {
         -- Autocompletion
         'hrsh7th/nvim-cmp',
@@ -81,14 +86,15 @@ require('lazy').setup({
             -- Snippet Engine & its associated nvim-cmp source
             'L3MON4D3/LuaSnip',
             'saadparwaiz1/cmp_luasnip',
-            
+
             -- Adds LSP completion capabilities
             'hrsh7th/cmp-nvim-lsp',
-            
+
             -- Adds a number of user-friendly snippets
             'rafamadriz/friendly-snippets',
         },
     },
+
     {
         -- Add indentation guides even on blank lines
         'lukas-reineke/indent-blankline.nvim',
@@ -97,12 +103,11 @@ require('lazy').setup({
         opts = {
             char = '┊',
             show_current_context = true,
-            show_trailing_blankline_indent = false,
             show_end_of_line = true,
+            show_trailing_blankline_indent = false,
         },
     },
 }, {})
-
 
 -- Setup neovim lua configuration
 require('neodev').setup()
