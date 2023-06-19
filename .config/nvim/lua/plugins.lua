@@ -118,9 +118,7 @@ require('lazy').setup({
         opts = {},
     },
 
-    {
-        'windwp/nvim-ts-autotag',
-    },
+    { 'windwp/nvim-ts-autotag' },
 }, {})
 
 -- Setup neovim lua configuration
