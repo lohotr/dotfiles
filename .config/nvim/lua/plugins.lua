@@ -72,7 +72,11 @@ require('lazy').setup({
 
         -- Useful status updates for LSP
         -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-        { 'j-hui/fidget.nvim', opts = {} },
+        {
+            'j-hui/fidget.nvim',
+            tag = 'legacy', -- Author will rewritten it, so using legacy tag to avoid breaking changes.
+            opts = {},
+        },
 
         -- Additional lua configuration, makes nvim stuff amazing!
         'folke/neodev.nvim',
@@ -107,6 +111,16 @@ require('lazy').setup({
             show_trailing_blankline_indent = false,
         },
     },
+
+    {
+        'windwp/nvim-autopairs',
+        event = 'InsertEnter',
+        opts = {},
+    },
+
+    {
+        'windwp/nvim-ts-autotag',
+    },
 }, {})
 
 -- Setup neovim lua configuration
@@ -129,3 +143,22 @@ require('telescope').setup {
     },
 }
 
+require('nvim-treesitter.configs').setup {
+    highlight = {
+        enable = true,
+        disable = {},
+    },
+    indent = {
+        enable = true,
+        disable = {},
+    },
+    ensure_installed = {
+        'html',
+        'css',
+        'javascript',
+        'java',
+    },
+    autotag = {
+        enable = true,
+    }
+}
