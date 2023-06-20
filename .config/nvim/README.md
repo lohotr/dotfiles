@@ -3,7 +3,7 @@
 ## Install NeoVim from Source
 Github repo: [neovim](https://github.com/neovim/neovim)
 
-### Install on Ubuntu
+### Install on Debian
 1. Clone source code.
 2. Checkout to the `stable` tag (Optional but recommended)
 ```bash
@@ -40,3 +40,25 @@ https://github.com/ronthl/dotfiles/blob/b9e5b470f6b71d80cb27a636c3aec39759276b16
 
 **Result**
 ![](./screenshot/autopairs-result.gif)
+
+## Add `telescope.nvim` plugin
+### Install plugin
+https://github.com/ronthl/dotfiles/blob/0399957abca999ace7b2d3f74beba352eb20e621/.config/nvim/lua/plugins.lua#L40-L44
+
+Call `:checkhealth telescope` after installing telescope to ensure everything is set up correctly.
+As you can see in the image below, there was an error and I need to fix it in order to use `live-grep` functionality.
+![](./screenshot/telescope-health-before.png)
+
+To fix it simply install `ripgrep`:
+* On Debian:
+```bash
+sudo apt install ripgrep
+```
+
+Check health again to see the result.
+**Note**: You don't need to fix the `WARNING` since they are optional.
+![](./screenshot/telescope-health-after.png)
+
+### Configure `telescope.nvim`
+Try the command `:Telescope find_files<cr>` to see if `telescope.nvim` is installed correctly.
+![](./screenshot/telescope-verify.gif)
