@@ -25,3 +25,12 @@ sudo make install
 
 **Result**
 ![](./screenshot/nvim-result.png)
+
+## Install package manager `lazy.nvim`
+https://github.com/ronthl/dotfiles/blob/44543437ddd7164d99047dc3cde9b00fc5271d28/.config/nvim/lua/plugins.lua#L4-L15
+
+## Add theme `onedark.nvim`
+https://github.com/ronthl/dotfiles/blob/44543437ddd7164d99047dc3cde9b00fc5271d28/.config/nvim/lua/plugins.lua#L23-L32
+
+**Result**
+![](./screenshot/theme-result.png)
