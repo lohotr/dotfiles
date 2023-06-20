@@ -5,7 +5,10 @@ Github repo: [neovim](https://github.com/neovim/neovim)
 
 ### Install on Ubuntu
 1. Clone source code.
-2. Checkout to the `stable` tag (recommended)
+2. Checkout to the `stable` tag (Optional but recommended)
+```bash
+git checkout tags/stable
+```
 3. Install build tools and dependencies
 ```bash
 sudo apt update
