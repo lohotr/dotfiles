@@ -74,3 +74,5 @@ java_error_in_goland.hprof
 .config/iterm2/
 .config/.git/
 .config/.gitignore
+
+lazy-lock.json
