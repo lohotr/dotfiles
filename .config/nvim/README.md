@@ -34,3 +34,9 @@ https://github.com/ronthl/dotfiles/blob/44543437ddd7164d99047dc3cde9b00fc5271d28
 
 **Result**
 ![](./screenshot/theme-result.png)
+
+## Add `nvim-autopairs` plugin
+https://github.com/ronthl/dotfiles/blob/b9e5b470f6b71d80cb27a636c3aec39759276b16/.config/nvim/lua/plugins.lua#L34-L38
+
+**Result**
+![](./screenshot/autopairs-result.gif)
