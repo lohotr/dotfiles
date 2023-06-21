@@ -1,3 +1,9 @@
+-- Set <space> as the leader key
+-- See `:help mapleader`
+-- NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 vim.o.relativenumber = true
 vim.o.nu = true
 
@@ -26,7 +32,6 @@ vim.o.undofile = true
 vim.o.showmode = false
 vim.o.termguicolors = true -- not work with MacOS terminal, should use iterm2 instead
 
--- support `indent-blankline`
 vim.opt.list = true
 vim.opt.listchars:append "eol:↴"
 
