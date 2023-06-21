@@ -62,3 +62,8 @@ Check health again to see the result.
 ### Configure `telescope.nvim`
 Try the command `:Telescope find_files<cr>` to see if `telescope.nvim` is installed correctly.
 ![](./screenshot/telescope-verify.gif)
+
+### Add some `telescope` keymaps
+https://github.com/ronthl/dotfiles/blob/1ace9daa5f7b34025b52837a983c9118c6532594/.config/nvim/lua/maps.lua#L3-L18
+
+BTW, my leader key is `<space>` 😁
