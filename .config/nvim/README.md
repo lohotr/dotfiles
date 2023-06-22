@@ -67,3 +67,12 @@ Try the command `:Telescope find_files<cr>` to see if `telescope.nvim` is instal
 https://github.com/ronthl/dotfiles/blob/1ace9daa5f7b34025b52837a983c9118c6532594/.config/nvim/lua/maps.lua#L3-L18
 
 BTW, my leader key is `<space>` 😁
+
+## Add `telescope-fzf-native.nvim`
+This is a `telescope.nvim` extension to improve sorting performance.
+
+### Install plugin
+https://github.com/ronthl/dotfiles/blob/2e8f3effd8a5295fc623baafaa49dff0b888002d/.config/nvim/lua/plugins.lua#L46-L52
+
+### Load plugin
+https://github.com/ronthl/dotfiles/blob/2e8f3effd8a5295fc623baafaa49dff0b888002d/.config/nvim/after/plugin/telescope.rc.lua#L1C1-L5
