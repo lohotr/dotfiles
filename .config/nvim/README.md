@@ -68,7 +68,7 @@ https://github.com/ronthl/dotfiles/blob/1ace9daa5f7b34025b52837a983c9118c6532594
 
 BTW, my leader key is `<space>` 😁
 
-## Add `telescope-fzf-native.nvim`
+## Add `telescope-fzf-native.nvim` plugin
 This is a `telescope.nvim` extension to improve sorting performance.
 
 ### Install plugin
