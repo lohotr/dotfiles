@@ -75,4 +75,4 @@ This is a `telescope.nvim` extension to improve sorting performance.
 https://github.com/ronthl/dotfiles/blob/2e8f3effd8a5295fc623baafaa49dff0b888002d/.config/nvim/lua/plugins.lua#L46-L52
 
 ### Load plugin
-https://github.com/ronthl/dotfiles/blob/2e8f3effd8a5295fc623baafaa49dff0b888002d/.config/nvim/after/plugin/telescope.rc.lua#L1C1-L5
+https://github.com/ronthl/dotfiles/blob/4bbc330b8a3ad449979e8ea8ae7387325d379257/.config/nvim/after/plugin/telescope.rc.lua#L1-L5
