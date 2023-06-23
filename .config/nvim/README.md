@@ -76,3 +76,22 @@ https://github.com/ronthl/dotfiles/blob/2e8f3effd8a5295fc623baafaa49dff0b888002d
 
 ### Load plugin
 https://github.com/ronthl/dotfiles/blob/4bbc330b8a3ad449979e8ea8ae7387325d379257/.config/nvim/after/plugin/telescope.rc.lua#L1-L5
+
+## Add `nvim-lspconfig` plugin
+### Install plugin
+https://github.com/ronthl/dotfiles/blob/bf37b9e82f188223eee5f2c3506b556f0c5e1457/.config/nvim/lua/plugins.lua#L54-L66
+
+### Ensure installing LSP as your preference
+https://github.com/ronthl/dotfiles/blob/f8d267e359aa2451504a3d9066604c7674733138/.config/nvim/after/plugin/lsp.rc.lua#L7-L16
+
+### Configure and Load your LSP
+The code block below is to configure LSP for Typescript and Javascript.
+https://github.com/ronthl/dotfiles/blob/f8d267e359aa2451504a3d9066604c7674733138/.config/nvim/after/plugin/lsp.rc.lua#L68-L73
+
+### Adding some key maps to interact with LSP
+https://github.com/ronthl/dotfiles/blob/f8d267e359aa2451504a3d9066604c7674733138/.config/nvim/after/plugin/lsp.rc.lua#L39-L44
+
+Take a look at the whole configuration at [lsp.rc.lua](https://github.com/ronthl/dotfiles/blob/f8d267e359aa2451504a3d9066604c7674733138/.config/nvim/after/plugin/lsp.rc.lua#L39-L44).
+
+**Result**
+![](./screenshot/lsp-result.gif)
