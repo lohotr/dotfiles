@@ -111,4 +111,4 @@ https://github.com/ronthl/dotfiles/blob/f1432f96c6dd912ff9720b181b13495d72762c9c
 The whole configuration at [null-ls.rc.lua](https://github.com/ronthl/dotfiles/blob/e63ca9e868876dec8a7261b4a9cf588372488330/.config/nvim/after/plugin/null-ls.rc.lua#L31-L38).
 
 **Result**
-[](./screenshot/null-ls-result.gif)
+![](./screenshot/null-ls-result.gif)
