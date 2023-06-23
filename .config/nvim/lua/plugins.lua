@@ -44,10 +44,24 @@ require('lazy').setup({
   },
 
   {
-    'nvim-telescope/telescope-fzf-native.nvim', -- Telescope extension to improve sorting performance
+    'nvim-telescope/telescope-fzf-native.nvim', -- Telescope plugin to improve sorting performance
     build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
     cond = function()
-      return vim.fn.executable 'cmake' == 1 -- Only build when true
+      return vim.fn.executable 'cmake' == 1
     end,
+  },
+
+  {
+    -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',
+    tag = 'v0.1.4',
+    dependencies = {
+      -- Automatically install LSPs to stdpath for neovim
+      { 'williamboman/mason.nvim', config = true, tag = 'v1.4.0' },
+      { 'williamboman/mason-lspconfig.nvim', tag = 'v1.7.1' },
+
+      -- Useful status updates for lSP
+      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} }
+    }
   }
 }, {})
