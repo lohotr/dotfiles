@@ -6,9 +6,12 @@ if (not ok) then return end
 
 mason_lspconfig.setup({
   ensure_installed = {
-    'html',
+    -- `tsserver` works well with Typescript but not Javascript 🤦
     'tsserver',
-    'quick_lint_js',
+    -- `quick_lint_js` gives you instant feedback with over 130x faster than ESLint.
+    -- But it only works with Javascript 😔
+    'quick_lint_js', 
+                     
     'cssls',
   }
 })
@@ -73,8 +76,7 @@ lspconfig.tsserver.setup({
 lspconfig.quick_lint_js.setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  single_file_support = true,
-  filetypes = { 'javascript' }
+  single_file_support = true
 })
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -82,21 +84,5 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 lspconfig.cssls.setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  single_file_support = true,
-  filetypes = { 'css', 'html' }
+  single_file_support = true
 })
-
-lspconfig.html.setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-  single_file_support = true,
-  init_options = {
-    configurationSection = { 'html', 'css', 'javascript' },
-    embeddedLanguages = {
-      css = true,
-      javascript = true
-    },
-    providerFormatter = true
-  }
-})
-
