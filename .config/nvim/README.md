@@ -95,3 +95,20 @@ Take a look at the whole configuration at [lsp.rc.lua](https://github.com/ronthl
 
 **Result**
 ![](./screenshot/lsp-result.gif)
+
+## Add `null-ls` plugin
+[null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim) is to use NeoVim as a language server to to inject LSP diagnostic,
+code actions, and more via Lua.
+
+### Install plugin
+https://github.com/ronthl/dotfiles/blob/f1432f96c6dd912ff9720b181b13495d72762c9c/.config/nvim/lua/plugins.lua#L68-L71
+
+### Configure and Load plugin
+`null-ls` has a huge extensions such as `prettier`, `eslint`, etc... So you can choose any of them as your preference.
+Here are my simple configuration to use `null-ls` with `prettier` extension as a formatter.
+https://github.com/ronthl/dotfiles/blob/f1432f96c6dd912ff9720b181b13495d72762c9c/.config/nvim/after/plugin/null-ls.rc.lua#L31-L38
+
+The whole configuration at [null-ls.rc.lua](https://github.com/ronthl/dotfiles/blob/e63ca9e868876dec8a7261b4a9cf588372488330/.config/nvim/after/plugin/null-ls.rc.lua#L31-L38).
+
+**Result**
+[](./screenshot/null-ls-result.gif)
