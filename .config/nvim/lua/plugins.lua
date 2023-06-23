@@ -63,5 +63,10 @@ require('lazy').setup({
       -- Useful status updates for lSP
       { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} }
     }
+  },
+
+  {
+    'jose-elias-alvarez/null-ls.nvim',
+    commit = 'bbaf5a96913aa92281f154b08732be2f57021c45'
   }
 }, {})
