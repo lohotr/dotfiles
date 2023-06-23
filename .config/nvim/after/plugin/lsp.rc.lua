@@ -11,7 +11,6 @@ mason_lspconfig.setup({
     -- `quick_lint_js` gives you instant feedback with over 130x faster than ESLint.
     -- But it only works with Javascript 😔
     'quick_lint_js', 
-                     
     'cssls',
   }
 })
