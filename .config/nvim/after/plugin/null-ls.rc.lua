@@ -17,6 +17,7 @@ end
 local on_attach = function(client, buffer)
   -- the Buffer will be null in buffers like nvim-tree or new unsaved files
   if client.supports_method('textDocument/formatting') then
+    -- Format on save
     vim.api.nvim_clear_autocmds({ group = augroup, buffer = buffer })
     vim.api.nvim_create_autocmd('BufWritePre', {
       group = augroup,
