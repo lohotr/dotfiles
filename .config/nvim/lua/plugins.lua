@@ -90,6 +90,11 @@ require('lazy').setup({
       {
         'saadparwaiz1/cmp_luasnip',
         commit = '18095520391186d634a0045dacaa346291096566'
+      },
+      {
+        -- Adds a number of user-friendly snippets
+        'rafamadriz/friendly-snippets',
+        commit = '5749f093759c29e3694053d048ceb940fe12c3d3'
       }
     }
   }
