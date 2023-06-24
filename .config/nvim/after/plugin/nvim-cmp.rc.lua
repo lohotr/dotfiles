@@ -4,6 +4,11 @@ if (not ok) then return end
 local ok, luasnip = pcall(require, 'luasnip')
 if (not ok) then return end
 
+local ok, cmp_autopairs = pcall(require, 'nvim-autopairs.completion.cmp')
+if ok then
+  cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+end
+
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup({})
 
@@ -12,6 +17,9 @@ cmp.setup({
     expand = function(args)
       lua.lsp_expand(args.body)
     end
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert {
     ['<C-n>'] = cmp.mapping.select_next_item(),

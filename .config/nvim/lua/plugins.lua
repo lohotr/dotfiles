@@ -61,7 +61,7 @@ require('lazy').setup({
       { 'williamboman/mason-lspconfig.nvim', tag = 'v1.7.1' },
 
       -- Useful status updates for lSP
-      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} }
+      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
     }
   },
 
