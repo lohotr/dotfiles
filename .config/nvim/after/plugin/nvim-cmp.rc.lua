@@ -6,6 +6,7 @@ if (not ok) then return end
 
 local ok, cmp_autopairs = pcall(require, 'nvim-autopairs.completion.cmp')
 if ok then
+  -- Autopairs when confirm
   cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 end
 
