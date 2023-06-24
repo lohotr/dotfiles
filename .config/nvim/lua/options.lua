@@ -37,6 +37,7 @@ vim.o.termguicolors = true -- not work with MacOS terminal, should use iterm2 in
 
 vim.opt.list = true
 vim.opt.listchars:append "eol:↴"
+vim.opt.listchars:append "trail: "
 
 --vim.o.shortmess = 'a'
 --vim.cmd 'set cmdheight=10'
