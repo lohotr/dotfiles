@@ -91,7 +91,7 @@ https://github.com/ronthl/dotfiles/blob/f8d267e359aa2451504a3d9066604c7674733138
 ### Adding some key maps to interact with LSP
 https://github.com/ronthl/dotfiles/blob/f8d267e359aa2451504a3d9066604c7674733138/.config/nvim/after/plugin/lsp.rc.lua#L39-L44
 
-Take a look at the whole configuration at [lsp.rc.lua](https://github.com/ronthl/dotfiles/blob/f8d267e359aa2451504a3d9066604c7674733138/.config/nvim/after/plugin/lsp.rc.lua#L39-L44).
+Take a look at the whole configuration at [lsp.rc.lua](https://github.com/ronthl/dotfiles/blob/98e70824261667c67ee621e27c9ae5355af62d64/.config/nvim/after/plugin/lsp.rc.lua).
 
 **Result**
 ![](./screenshot/lsp-result.gif)
