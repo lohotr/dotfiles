@@ -126,5 +126,5 @@ The whole configuration can be found at [nvim-cmp.rc.lua](https://github.com/ron
 ### Add additional completion capabilities to LSP (Optional)
 https://github.com/ronthl/dotfiles/blob/c474beef5260431733ff5c30f4b75e57b03014dd/.config/nvim/after/plugin/lsp.rc.lua#L68-L72
 
-### Autopairs when comfirm completion (Optional)
+### Autopairs when confirm completion (Optional)
 https://github.com/ronthl/dotfiles/blob/da3660a7b0cbdb724af3687e4af4b51233e11c99/.config/nvim/after/plugin/nvim-cmp.rc.lua#L7-L10
