@@ -81,4 +81,10 @@ require('lazy').setup({
       { 'rafamadriz/friendly-snippets' }
     }
   },
+
+  {
+    -- Smart and powerful comment plugin
+    'numToStr/Comment.nvim',
+    opts = {},
+  },
 }, {})
