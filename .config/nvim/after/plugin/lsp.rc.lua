@@ -12,6 +12,8 @@ mason_lspconfig.setup({
     -- But it only works with Javascript 😔
     'quick_lint_js', 
     'cssls',
+    'gopls',
+    'lua_ls',
   }
 })
 
@@ -82,6 +84,24 @@ lspconfig.quick_lint_js.setup({
   capabilities = capabilities,
   on_attach = on_attach,
   single_file_support = true
+})
+
+lspconfig.gopls.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  single_file_support = true
+})
+
+lspconfig.lua_ls.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  single_file_support = true,
+  settings = {
+    Lua = {
+      workspace = { checkThirdParty = false },
+      telemetry = { enable = false },
+    }
+  }
 })
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true

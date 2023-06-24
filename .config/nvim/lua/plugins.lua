@@ -54,48 +54,31 @@ require('lazy').setup({
   {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
-    tag = 'v0.1.4',
     dependencies = {
       -- Automatically install LSPs to stdpath for neovim
-      { 'williamboman/mason.nvim', config = true, tag = 'v1.4.0' },
-      { 'williamboman/mason-lspconfig.nvim', tag = 'v1.7.1' },
+      { 'williamboman/mason.nvim', config = true },
+      { 'williamboman/mason-lspconfig.nvim' },
 
       -- Useful status updates for lSP
       { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
     }
   },
 
-  {
-    'jose-elias-alvarez/null-ls.nvim',
-    commit = 'bbaf5a96913aa92281f154b08732be2f57021c45'
-  },
+  { 'jose-elias-alvarez/null-ls.nvim' },
 
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
-    commit = 'e1f1b40790a8cb7e64091fb12cc5ffe350363aa0',
     dependencies = {
       -- Adds LSP completion capabilities
-      {
-        'hrsh7th/cmp-nvim-lsp',
-        commit = '44b16d11215dce86f253ce0c30949813c0a90765'
-      },
+      { 'hrsh7th/cmp-nvim-lsp' },
 
       -- Snippet Engine & its associated nvim-cmp source
-      {
-        -- It's required to make nvim-cmp working
-        'L3MON4D3/LuaSnip',
-        commit = '3d2ad0c0fa25e4e272ade48a62a185ebd0fe26c1'
-      },
-      {
-        'saadparwaiz1/cmp_luasnip',
-        commit = '18095520391186d634a0045dacaa346291096566'
-      },
-      {
-        -- Adds a number of user-friendly snippets
-        'rafamadriz/friendly-snippets',
-        commit = '5749f093759c29e3694053d048ceb940fe12c3d3'
-      }
+      -- It's required to make nvim-cmp working
+      { 'L3MON4D3/LuaSnip' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      -- Adds a number of user-friendly snippets
+      { 'rafamadriz/friendly-snippets' }
     }
-  }
+  },
 }, {})

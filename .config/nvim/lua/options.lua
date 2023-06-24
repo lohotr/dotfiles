@@ -4,6 +4,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Set completeopt to have a better completion experence
+vim.o.completeopt = 'menuone,noselect'
+
 vim.o.relativenumber = true
 vim.o.nu = true
 

@@ -15,11 +15,19 @@ luasnip.config.setup({})
 cmp.setup({
   snippet = {
     expand = function(args)
-      lua.lsp_expand(args.body)
+      luasnip.lsp_expand(args.body)
     end
   },
   window = {
     completion = cmp.config.window.bordered(),
+  },
+  formatting = {
+    fields = { 'abbr', 'kind', 'menu' },
+    format = function(entry, vim_item)
+      local source = entry.source.name
+      vim_item.menu = '(' .. source .. ')'
+      return vim_item
+    end
   },
   mapping = cmp.mapping.preset.insert {
     ['<C-n>'] = cmp.mapping.select_next_item(),
