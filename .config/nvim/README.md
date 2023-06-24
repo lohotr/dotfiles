@@ -112,3 +112,16 @@ The whole configuration at [null-ls.rc.lua](https://github.com/ronthl/dotfiles/b
 
 **Result**
 ![](./screenshot/null-ls-result.gif)
+
+## Add `nvim-cmp` plugin
+[nvim-cmp](https://github.com/hrsh7th/nvim-cmp) is a completion engine plugin for NeoVim written in Lua.
+Completion sources are installed from external repositories and "sourced".
+
+### Install plugin
+https://github.com/ronthl/dotfiles/blob/c474beef5260431733ff5c30f4b75e57b03014dd/.config/nvim/lua/plugins.lua#L73-L95
+
+### Configure and Load plugin
+The whole configuration can be found at [nvim-cmp.rc.lua](https://github.com/ronthl/dotfiles/blob/c474beef5260431733ff5c30f4b75e57b03014dd/.config/nvim/after/plugin/nvim-cmp.rc.lua).
+
+### Add additional completion capabilities to LSP (Optional)
+https://github.com/ronthl/dotfiles/blob/c474beef5260431733ff5c30f4b75e57b03014dd/.config/nvim/after/plugin/lsp.rc.lua#L68-L72
