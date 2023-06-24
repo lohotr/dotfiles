@@ -128,3 +128,8 @@ https://github.com/ronthl/dotfiles/blob/c474beef5260431733ff5c30f4b75e57b03014dd
 
 ### Autopairs when confirm completion (Optional)
 https://github.com/ronthl/dotfiles/blob/da3660a7b0cbdb724af3687e4af4b51233e11c99/.config/nvim/after/plugin/nvim-cmp.rc.lua#L7-L10
+
+## Add `Comment.nvim` plugin
+[Comment.nvim](https://github.com/numToStr/Comment.nvim) is a smart and powerful plugin.
+Supports treesitter, dot repeat, left-right/up-down motions, hook, and more.
+https://github.com/ronthl/dotfiles/blob/3c08b4a228b2fb736dac71041b9b6ffc91cf1104/.config/nvim/lua/plugins.lua#L85-L89
