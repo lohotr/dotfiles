@@ -137,3 +137,8 @@ https://github.com/ronthl/dotfiles/blob/3c08b4a228b2fb736dac71041b9b6ffc91cf1104
 ## Add `lsp_signature.nvim` plugin
 [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim) is a cool plugin to show function signature when you type.
 https://github.com/ronthl/dotfiles/blob/58234790f423802471f440a4e7a11bcc50b169e6/.config/nvim/lua/plugins.lua#L91-L95
+
+## Add `nvim-web-devicons` plugin
+[nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) supports showing file icons.
+It requires [a patched font](https://www.nerdfonts.com/).
+https://github.com/ronthl/dotfiles/blob/03327a359fe2f49b8022658d6ce5244927205982/.config/nvim/lua/plugins.lua#L97-L101
