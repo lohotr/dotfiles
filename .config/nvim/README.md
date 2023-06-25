@@ -145,4 +145,9 @@ https://github.com/ronthl/dotfiles/blob/03327a359fe2f49b8022658d6ce5244927205982
 
 ## Add `nvim-tree.lua` plugin
 [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) is a file explorer for NeoVim written in lua.
-https://github.com/ronthl/dotfiles/blob/064039311c713f1ae9266cd86082e034ef7116db/.config/nvim/lua/plugins.lua#L103-L106
+
+### Install plugin
+https://github.com/ronthl/dotfiles/blob/afb8ba40e86c8bcd62fbfd790e4c466ef39d62bc/.config/nvim/lua/plugins.lua#L103-L107
+
+### Add some keymaps
+https://github.com/ronthl/dotfiles/blob/afb8ba40e86c8bcd62fbfd790e4c466ef39d62bc/.config/nvim/lua/maps.lua#L26-L28
