@@ -83,7 +83,14 @@ require('lazy').setup({
   },
 
   {
+    -- Smart comment engine
     'numToStr/Comment.nvim',
+    opts = {},
+  },
+
+  {
+    -- A cool plugin to show function signature when you type.
+    'ray-x/lsp_signature.nvim',
     opts = {},
   },
 }, {})
