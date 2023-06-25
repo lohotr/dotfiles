@@ -142,3 +142,7 @@ https://github.com/ronthl/dotfiles/blob/58234790f423802471f440a4e7a11bcc50b169e6
 [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) supports showing file icons.
 It requires [a patched font](https://www.nerdfonts.com/).
 https://github.com/ronthl/dotfiles/blob/03327a359fe2f49b8022658d6ce5244927205982/.config/nvim/lua/plugins.lua#L97-L101
+
+## Add `nvim-tree.lua` plugin
+[nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) is a file explorer for NeoVim written in lua.
+https://github.com/ronthl/dotfiles/blob/064039311c713f1ae9266cd86082e034ef7116db/.config/nvim/lua/plugins.lua#L103-L106

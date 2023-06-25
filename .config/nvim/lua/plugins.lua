@@ -101,6 +101,7 @@ require('lazy').setup({
   },
 
   {
+    -- Add a file explorer.
     'nvim-tree/nvim-tree.lua',
     opts = {},
   }
