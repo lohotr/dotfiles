@@ -83,7 +83,6 @@ require('lazy').setup({
   },
 
   {
-    -- Smart and powerful comment plugin
     'numToStr/Comment.nvim',
     opts = {},
   },
