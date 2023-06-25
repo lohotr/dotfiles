@@ -24,5 +24,5 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- [[ Nvim Tree keymaps]]
-vim.keymap.set('n', '<leader>to', ':NvimTreeFocus<cr>', { desc = 'Nvim [T]ree [O]opened'} )
-vim.keymap.set('n', '<leader>tc', ':NvimTreeClose<cr>', { desc = 'Nvim [T]ree [C]losed'} )
+vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<cr>', { desc = 'Nvim [T]ree [T]oggle to open or close the tree' })
+vim.keymap.set('n', '<leader>tf', ':NvimTreeFindFile<cr>', { desc = 'Nvim [T]ree [F]ind file in the tree' })
