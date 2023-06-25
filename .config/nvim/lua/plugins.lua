@@ -93,4 +93,10 @@ require('lazy').setup({
     'ray-x/lsp_signature.nvim',
     opts = {},
   },
+
+  {
+    -- Adds file icons
+    'nvim-tree/nvim-web-devicons',
+    opts = {},
+  }
 }, {})
