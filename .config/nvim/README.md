@@ -133,3 +133,7 @@ https://github.com/ronthl/dotfiles/blob/da3660a7b0cbdb724af3687e4af4b51233e11c99
 [Comment.nvim](https://github.com/numToStr/Comment.nvim) is a smart and powerful plugin.
 Supports treesitter, dot repeat, left-right/up-down motions, hook, and more.
 https://github.com/ronthl/dotfiles/blob/3c08b4a228b2fb736dac71041b9b6ffc91cf1104/.config/nvim/lua/plugins.lua#L85-L89
+
+## Add `lsp_signature.nvim` plugin
+[lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim) is a cool plugin to show function signature when you type.
+https://github.com/ronthl/dotfiles/blob/58234790f423802471f440a4e7a11bcc50b169e6/.config/nvim/lua/plugins.lua#L91-L95
