@@ -3,7 +3,7 @@ if (not ok) then return end
 
 telescope.setup({
   defaults = {
-    path_display = { 'smart' } -- shorten path when find or search files
+    path_display = { 'shorten' }, -- Shorten file paths
   }
 })
 
