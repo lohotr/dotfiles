@@ -109,5 +109,5 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 lspconfig.cssls.setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  single_file_support = true
+  single_file_support = true,
 })
