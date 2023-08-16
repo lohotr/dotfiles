@@ -14,6 +14,7 @@ mason_lspconfig.setup({
     'cssls',
     'gopls',
     'lua_ls',
+    'pyright',
   }
 })
 
@@ -87,6 +88,12 @@ lspconfig.quick_lint_js.setup({
 })
 
 lspconfig.gopls.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  single_file_support = true
+})
+
+lspconfig.pyright.setup({
   capabilities = capabilities,
   on_attach = on_attach,
   single_file_support = true
