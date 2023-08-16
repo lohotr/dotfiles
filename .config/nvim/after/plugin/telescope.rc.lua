@@ -3,7 +3,7 @@ if (not ok) then return end
 
 telescope.setup({
   defaults = {
-    path_display = { 'shorten' }, -- Shorten file paths
+    path_display = { 'truncate' }, -- Truncate when the whole path will not fit
   }
 })
 
