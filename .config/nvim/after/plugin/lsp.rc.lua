@@ -6,6 +6,7 @@ if (not ok) then return end
 
 mason_lspconfig.setup({
   ensure_installed = {
+    'html',
     -- `tsserver` works well with Typescript but not Javascript 🤦
     'tsserver',
     -- `quick_lint_js` gives you instant feedback with over 130x faster than ESLint.
@@ -114,6 +115,12 @@ lspconfig.lua_ls.setup({
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 lspconfig.cssls.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  single_file_support = true,
+})
+
+lspconfig.html.setup({
   capabilities = capabilities,
   on_attach = on_attach,
   single_file_support = true,
