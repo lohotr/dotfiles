@@ -75,7 +75,12 @@ require('lazy').setup({
 
       -- Snippet Engine & its associated nvim-cmp source
       -- It's required to make nvim-cmp working
-      { 'L3MON4D3/LuaSnip' },
+      {
+        'L3MON4D3/LuaSnip',
+        version = "2.2",
+        build = "make install_jsregexp"
+      },
+
       { 'saadparwaiz1/cmp_luasnip' },
       -- Adds a number of user-friendly snippets
       { 'rafamadriz/friendly-snippets' }
