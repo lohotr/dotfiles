@@ -16,6 +16,7 @@ mason_lspconfig.setup({
     'gopls',
     'lua_ls',
     'pyright',
+    'volar',
   }
 })
 
@@ -121,6 +122,12 @@ lspconfig.cssls.setup({
 })
 
 lspconfig.html.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  single_file_support = true,
+})
+
+lspconfig.volar.setup({
   capabilities = capabilities,
   on_attach = on_attach,
   single_file_support = true,
