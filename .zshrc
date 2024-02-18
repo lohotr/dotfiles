@@ -6,7 +6,7 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to pyenv's shims
-export PYENV_ROOT="/Users/long/.pyenv"
+export PYENV_ROOT="~$HOME/.pyenv"
 export PATH=$PYENV_ROOT/shims:$PATH
 
 # Path to GPG_TTY
@@ -130,4 +130,3 @@ alias ls="eza -alF --color=always --sort=size | grep -v /" # list everything sor
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-[[ -s /Users/long/.rsvm/rsvm.sh ]] && . /Users/long/.rsvm/rsvm.sh # This loads RSVM
