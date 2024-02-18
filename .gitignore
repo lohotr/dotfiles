@@ -32,7 +32,6 @@ go/
 .m2/
 .npm/
 .nuget/
-.oh-my-zsh/
 .plastic4/
 .sonarlint/
 .ssh/
