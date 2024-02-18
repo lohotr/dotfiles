@@ -61,7 +61,6 @@ go/
 .zcompdump*
 .zprofile
 .zsh_history
-.zshrc
 .zshrc.backup
 icons.zsh
 java_error_in_goland.hprof
