@@ -1,51 +1,28 @@
-vim.g.mapleader = " "
+-- [[ Telescope Keymaps ]]
+-- See `:help telescope.builtin`
+vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
+vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader>/', function()
+  -- You can pass additional configuration to telescope to change theme, layout, etc.
+  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+end, { desc = '[/] Fuzzily search in current buffer' })
 
-local keymap = vim.keymap
-local opts = { noremap = true, silent = true}
+vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
+vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
+vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
+vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
+vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
--- Telescope
-keymap.set("n", "<leader>fb", ":lua require('telescope').extensions.file_browser.file_browser({respect_gitignore = false, initial_mode = 'normal'})<CR>", opts)
-keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files({no_ignore = true})<CR>", opts)
-keymap.set("n", "<leader>gs", ":lua require('telescope.builtin').grep_string()<CR>", opts)
-keymap.set("n", "<leader>lg", ":lua require('telescope.builtin').live_grep()<CR>", opts)
-keymap.set("n", "<C-p>", ":lua require('telescope.builtin').git_files()<CR>", opts)
-keymap.set("n", "<leader>td", ":lua require('telescope.builtin').diagnostics()<CR>", opts)
-keymap.set("n", "<leader>tr", ":lua require('telescope.builtin').lsp_references()<CR>", opts)
+-- [[ Diagnostic keymaps ]]
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
--- LSP
-keymap.set("n", "<S-k>", ":lua vim.lsp.buf.hover()<CR>", opts)
-keymap.set("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts)
-keymap.set("n", "<leader>gt", ":lua vim.lsp.buf.type_definition()<CR>", opts)
-keymap.set("n", "gi", ":lua vim.lsp.buf.implementation()<CR>", opts)
-keymap.set("n", "gr", ":lua vim.lsp.buf.references()<CR>", opts)
-keymap.set("n", "<leader>vca", ":lua vim.lsp.buf.code_action()<CR>", opts)
-keymap.set("n", "<leader>r", ":lua vim.lsp.buf.rename()<CR>", opts)
-keymap.set("n", "<leader>dj", ":lua vim.diagnostic.goto_next()<CR>", opts)
-keymap.set("n", "<leader>dk", ":lua vim.diagnostic.goto_prev()<CR>", opts)
-
--- Debugging
-keymap.set("n", "<leader>c", ":lua require'dap'.continue()<CR>", opts)
-keymap.set("n", "<leader>o", ":lua require'dap'.step_over()<CR>", opts)
-keymap.set("n", "<leader>j", ":lua require'dap'.step_into()<CR>", opts)
-keymap.set("n", "<leader>k", ":lua require'dap'.step_out()<CR>", opts)
-keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>", opts)
-keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
-keymap.set("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", opts)
-keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>", opts)
-keymap.set("n", "<leader>dt", ":lua require'dap-go'.debug_test()<CR>", opts)
-keymap.set("n", "<leader>m", ":lua require('dapui').eval()<CR>", opts)
-
--- Bufferline
-keymap.set("n", "gt", [[v:count ? (v:count > 0 ? "m'" . ":lua require('bufferline').go_to_buffer(" . v:count . ", true)<CR>" : ":BufferLineCycleNext<CR>") : ":BufferLineCycleNext<CR>"]], { noremap = true, silent = true, expr = true })
-keymap.set("n", "gT", ":BufferLineCyclePrev<CR>", opts)
-keymap.set("n", "gpg", ":BufferLinePick<CR>", opts)
-keymap.set("n", "gpc", ":BufferLinePickClose<CR>", opts)
-
--- Resize window
-keymap.set('n', '<C-w><left>', '<C-w><')
-keymap.set('n', '<C-w><right>', '<C-w>>')
-keymap.set('n', '<C-w><up>', '<C-w>+')
-keymap.set('n', '<C-w><down>', '<C-w>-')
-
--- new terminal
-keymap.set("n", "<leader>nt", ":new | resize 20 | term<CR>", opts)
+-- [[ Nvim Tree keymaps]]
+vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<cr>', { desc = 'Nvim [T]ree [T]oggle to open or close the tree' })
+vim.keymap.set('n', '<leader>tf', ':NvimTreeFindFile<cr>', { desc = 'Nvim [T]ree [F]ind file in the tree' })
