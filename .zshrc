@@ -1,3 +1,4 @@
+#zmodload zsh/zprof
 # Configure Homebrew's completions in oh-my-zsh
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -133,8 +134,10 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Add go version manager path
-[[ -s "/Users/long/.gvm/scripts/gvm" ]] && source "/Users/long/.gvm/scripts/gvm"
+# NOTE: This slows down the zsh performance
+#[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+#zprof
