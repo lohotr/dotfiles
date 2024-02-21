@@ -17,6 +17,7 @@ mason_lspconfig.setup({
     'lua_ls',
     'pyright',
     'volar',
+    'kotlin_language_server',
   }
 })
 
@@ -128,6 +129,12 @@ lspconfig.html.setup({
 })
 
 lspconfig.volar.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  single_file_support = true,
+})
+
+lspconfig.kotlin_language_server.setup({
   capabilities = capabilities,
   on_attach = on_attach,
   single_file_support = true,
