@@ -1,8 +1,3 @@
-# Enable syntax highlighting
-source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-
-# Enable auto-complete
-source $HOME/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 #zmodload zsh/zprof
 # Configure Homebrew's completions in oh-my-zsh
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
@@ -94,7 +89,13 @@ ZSH_THEME="heapbytes-mac"
 plugins=(
   git
   shrink-path
+  zsh-autocomplete
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
+
+# Bind key for zsh-autosuggestion
+bindkey '^ ' autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
 
