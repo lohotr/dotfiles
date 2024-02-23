@@ -94,10 +94,14 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+source $ZSH/oh-my-zsh.sh
+
 # Bind key for zsh-autosuggestion
 bindkey '^ ' autosuggest-accept
 
-source $ZSH/oh-my-zsh.sh
+# Bind key for zsh-autocomplete
+bindkey '^l' menu-select "^h" menu-select
+bindkey -M menuselect '^l' menu-complete '^h' reverse-menu-complete
 
 # User configuration
 
@@ -133,6 +137,9 @@ alias lf="eza -alfg --icons" # list all files only
 alias lh="eza -dlg .* --icons --group-directories-first" # list all hidden files and directory
 alias lt="eza -al --sort=modified" # list everything sorted by updated time
 alias ls="eza -alF --color=always --sort=size | grep -v /" # list everything sorted by size
+
+# alias for java decompiler
+alias javad="java -jar $HOME/Documents/dev/mine/open-source/fernflower/build/libs/fernflower.jar"
 
 # Add node version manager path
 export NVM_DIR="$HOME/.nvm"
