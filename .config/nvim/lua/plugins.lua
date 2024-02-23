@@ -64,6 +64,8 @@ require('lazy').setup({
     }
   },
 
+  { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
+
   { 'jose-elias-alvarez/null-ls.nvim' },
 
   {
@@ -135,6 +137,11 @@ require('lazy').setup({
   },
 
   { 'wellle/context.vim' },
+
+  {
+    'stevearc/conform.nvim',
+    event = { 'BufReadPre', 'BufNewFile' }
+  },
 
   require('plugins.debug')
 }, {})
