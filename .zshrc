@@ -100,6 +100,8 @@ source $ZSH/oh-my-zsh.sh
 bindkey '^ ' autosuggest-accept
 
 # Bind key for zsh-autocomplete
+bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 bindkey '^l' menu-select "^h" menu-select
 bindkey -M menuselect '^l' menu-complete '^h' reverse-menu-complete
 
