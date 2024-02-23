@@ -48,3 +48,4 @@ vim.opt.listchars:append "trail: "
 --vim.cmd 'set cmdheight=10'
 --vim.cmd 'set shortmess=a'
 
+vim.g.context_enabled = 0 -- Disable context plugin by default
