@@ -120,5 +120,18 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
+  {
+    -- Add indentation guides even on blank lines
+    'lukas-reineke/indent-blankline.nvim',
+    main = "ibl",
+    opts = {
+      scope = {
+        enabled = true,
+        show_start = false,
+        show_end = false,
+      }
+    },
+  },
+
   require('plugins.debug')
 }, {})

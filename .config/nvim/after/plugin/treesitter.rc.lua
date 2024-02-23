@@ -12,6 +12,7 @@ treesitter.setup({
   },
   -- ensure these language parsers are installed
   ensure_installed = {
+    "vimdoc",
     "lua",
     "json",
     "html",
