@@ -143,5 +143,10 @@ require('lazy').setup({
     event = { 'BufReadPre', 'BufNewFile' }
   },
 
+  {
+    'mfussenegger/nvim-lint',
+    event = { "BufReadPre", "BufNewFile" }
+  },
+
   require('plugins.debug')
 }, {})
