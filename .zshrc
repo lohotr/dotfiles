@@ -15,7 +15,7 @@ export GPG_TTY=$(tty)
 
 # eza environment variable for color scheme
 # https://github.com/eza-community/eza/blob/626eb34df26376fc36758894424676ffa4363785/man/eza_colors.5.md
-export EZA_COLORS="fi=97:oc=0:ur=0:uw=0:ux=0:ue=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0:nb=0:nk=0:nm=0:ng=1:nt=1:uu=00:uR=0:un=0:gu=0:gR=0:gn=0:da=0:sp=1:sc=97"
+export EZA_COLORS="di=96:fi=97:oc=0:ur=0:uw=0:ux=0:ue=0:gr=0:gw=0:gx=0:tr=0:tw=0:tx=0:nb=0:nk=0:nm=0:ng=1:nt=1:uu=00:uR=0:un=0:gu=0:gR=0:gn=0:da=0:sp=1:sc=97"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
