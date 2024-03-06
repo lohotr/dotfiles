@@ -10,6 +10,9 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 export PYENV_ROOT="~$HOME/.pyenv"
 export PATH=$PYENV_ROOT/shims:$PATH
 
+# Activate CLI tools
+source $HOME/Documents/env/activate
+
 # Path to GPG_TTY
 export GPG_TTY=$(tty)
 
@@ -46,6 +49,10 @@ ZSH_THEME="heapbytes-mac"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
+
+# Docker auto-completion
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -92,6 +99,7 @@ plugins=(
   zsh-autocomplete
   zsh-autosuggestions
   zsh-syntax-highlighting
+  docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -142,9 +150,6 @@ alias ls="eza -alF --color=always --sort=size | grep -v /" # list everything sor
 
 # alias for java decompiler
 alias javad="java -jar $HOME/Documents/dev/mine/open-source/fernflower/build/libs/fernflower.jar"
-
-# Activate aws-cli
-source $HOME/Documents/aws-cli/activate
 
 # Add node version manager path
 export NVM_DIR="$HOME/.nvm"
