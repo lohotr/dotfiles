@@ -100,6 +100,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   docker
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
