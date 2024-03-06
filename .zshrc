@@ -1,4 +1,4 @@
-#zmodload zsh/zprof
+# zmodload zsh/zprof
 # Configure Homebrew's completions in oh-my-zsh
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -143,6 +143,9 @@ alias ls="eza -alF --color=always --sort=size | grep -v /" # list everything sor
 # alias for java decompiler
 alias javad="java -jar $HOME/Documents/dev/mine/open-source/fernflower/build/libs/fernflower.jar"
 
+# Activate aws-cli
+source $HOME/Documents/aws-cli/activate
+
 # Add node version manager path
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -155,4 +158,4 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-#zprof
+# zprof
