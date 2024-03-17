@@ -6,6 +6,7 @@ end
 conform.setup({
   formatters_by_ft = {
     kotlin = { "ktlint" },
+    graphql = { "prettierd" }
   },
 })
 

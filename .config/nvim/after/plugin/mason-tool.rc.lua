@@ -4,5 +4,6 @@ if not ok then return end
 mason_tool.setup({
   ensure_installed = {
     'ktlint',
+    'prettierd',
   },
 })

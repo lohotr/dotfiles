@@ -30,6 +30,7 @@ treesitter.setup({
     "dockerfile",
     "gitignore",
     "bash",
+    "graphql",
   },
 
   textobjects = {

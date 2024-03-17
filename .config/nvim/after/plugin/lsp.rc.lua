@@ -18,6 +18,7 @@ mason_lspconfig.setup({
     'pyright',
     'volar',
     'kotlin_language_server',
+    'graphql',
   }
 })
 
@@ -133,6 +134,12 @@ lspconfig.volar.setup({
 })
 
 lspconfig.kotlin_language_server.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  single_file_support = true,
+})
+
+lspconfig.graphql.setup({
   capabilities = capabilities,
   on_attach = on_attach,
   single_file_support = true,
